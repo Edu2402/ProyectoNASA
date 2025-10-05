@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spatial Biology Publications</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="particles-js"></div>
+    
+    <div class="container">
+        <header>
+            <h1>🔬 Spatial Biology Publications</h1>
+            <p class="subtitle">Analysis of scientific research and publications</p>
+        </header>
+
+        <div class="controls">
+            <button class="btn active" onclick="sortByInterest()">
+                📊 Sort by Interest
+            </button>
+            <button class="btn" onclick="sortByCost()">
+                💰 Sort by Cost
+            </button>
+            <button class="btn" onclick="resetOrder()">
+                🔄 Original Order
+            </button>
+        </div>
+
+        <div id="stats" class="stats">
+            <div class="stat-card">
+                <h3>Total Publications</h3>
+                <p id="totalPubs">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Average Interest</h3>
+                <p id="avgInterest">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Average Cost</h3>
+                <p id="avgCost">$0</p>
+            </div>
+        </div>
+
+        <div id="publications" class="publications-grid"></div>
+    </div>
+
+    <button id="chatButton" class="chat-button">
+        💬 AI Assistant
+    </button>
+
+    <div id="chatModal" class="chat-modal">
+        <div class="chat-container">
+            <div class="chat-header">
+                <h3>Gemini - Space Biology Assistant</h3>
+                <button id="closeChat" class="close-chat">&times;</button>
+            </div>
+            <div id="chatMessages" class="chat-messages"></div>
+            <div class="chat-input-container">
+                <input type="text" id="chatInput" class="chat-input" placeholder="Ask about space biology...">
+                <button id="sendMessage" class="send-button">Send</button>
+            </div>
+            </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
